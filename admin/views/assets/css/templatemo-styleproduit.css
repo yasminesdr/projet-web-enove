@@ -2,8 +2,11 @@
 @import url(fontawesome.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+
 body {
     font-family: 'myriad', sans-serif;
+    overflow-x: hidden;
 }
 
 .item-1, 
@@ -1183,12 +1186,13 @@ section.buttons .container-fluid {
     position: relative;
     background-image: linear-gradient(to right, #020024, #045023, #016f2c, #059033);
     margin: -100px -100px 0px -100px;
+    width:1920px;
 }
 
 #header .logo {
     text-align: right;
     display: inline-block;	
-    width: 100%;
+    width: 1920px;
     height: 100px;
     line-height: 100px;
 }

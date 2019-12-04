@@ -2,8 +2,12 @@
 @import url(fontawesome.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+
 body {
     font-family: 'myriad', sans-serif;
+    width: 1453px;
+    overflow-x: hidden;
 }
 
 .item-1, 
@@ -12,9 +16,9 @@ body {
 	position: absolute;
   display: block;
 	top: 2em;
-  
+  width:200px;
   width: 50%;
-  
+
   font-size: 2em;
 
 	animation-duration: 20s;
@@ -252,6 +256,8 @@ section {
     flex-direction: row-reverse;
     min-height: 100vh;
     width: 1920px;
+    margin-right: 0px;
+    overflow-x: hidden;
 }
 
 
@@ -912,7 +918,7 @@ section.buttons .container-fluid {
 #enove-logo
 {
     height: 50px;
-    width: auto;
+    width: 200px;
     padding-right: 10%;
 }
 
@@ -1051,7 +1057,7 @@ section.buttons .container-fluid {
     height: inherit;
     left: 0;
     line-height: inherit;
-    position: absolute;
+    position: relative;
     text-indent: 0;
     top: 0;
     width: inherit;
@@ -1061,7 +1067,7 @@ section.buttons .container-fluid {
     margin-left: -420px;
 }
 
-@media screen and (max-width: 1680px) {
+@media screen and (max-width: 2080px) {
     #sidebar {
         width: 380px;
     }
@@ -1155,7 +1161,7 @@ section.buttons .container-fluid {
         content: '';
         height: 60px;
         left: 15px;
-        position: absolute;
+        position: relative;
         top: 15px;
         width: 80px;
         color: #800000;
@@ -1170,9 +1176,6 @@ section.buttons .container-fluid {
     }
 }
 
-
-
-
 /* Header */
 
 #header {
@@ -1182,23 +1185,16 @@ section.buttons .container-fluid {
     display: flex;
     position: relative;
     background-image: linear-gradient(to right, #020024, #045023, #016f2c, #059033);
-    margin: -100px -100px 0px -100px;
+    margin: -100px -456px 0px 0px;
+    width: 1920px;
 }
 
 #header .logo {
     text-align: right;
     display: inline-block;	
-    width: 100%;
+    width: 1453px;
     height: 100px;
     line-height: 100px;
-}
-#header .logo a {
-	font-size: 36px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: #fff;
-	font-weight: 700;
-	margin-right: 100px;
 }
 
 

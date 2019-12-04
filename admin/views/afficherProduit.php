@@ -38,18 +38,16 @@
 		<nav class="header-nav">
 				<form action="POST">
 			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="../views/index.html" >Home</a></li>
 				<li><a href="about-us.html">Gestion Client</a></li>
-				<li><a href="afficherProduit.php">Gestion Produit</a></li>
+				<li><a href="afficherProduit.php" class="active">Gestion des Produits</a></li>
+        <li><a href="afficherCategorie.php">Gestion des Categories</a></li>
 				<li><a href="contact.html">Gestion Commande & panier</a></li>
 				<li><a href="contact.html">Gestion Livraison</a></li>
 				<li><a href="contact.html">Gestion d'événement</a></li>
-
 			</ul>
 		</form>
 			<div class="header-right">
-				
-				
 			</div>
 		</nav>
 	</header>
@@ -57,22 +55,7 @@
 
 	<!-- Hero Section end -->
 	<section class="hero-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="hs-text">
-						
-						
-					</div>
-				</div>
-				<div class="col-lg-6">
-					
-				</div>
-			</div>
-		</div>
-		<div class="hero-slider owl-carousel">
-			
-		</div>
+	
 	</section>
 	<!-- Hero Section end -->
 
@@ -220,6 +203,7 @@ else
 			<table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
     				<thead>
 						<tr class="first_line">
+                                <th>Image du Produit</th>
                                 <th>Reference ENOVE</th>
                                 <th>Reference IEC</th>
                                 <th>Categorie du produit</th>
@@ -254,6 +238,7 @@ else
                     </thead>
                     <tfoot>
                             <tr class="first_line">
+                                    <th>Image du Produit</th>
                                     <th>Reference ENOVE</th>
                                     <th>Reference IEC</th>
                                     <th>Categorie du produit</th>

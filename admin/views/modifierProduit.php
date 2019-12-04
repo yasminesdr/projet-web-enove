@@ -41,8 +41,8 @@ if (isset($_GET['REF_EN'])){
 <caption>Modifier Produit</caption>
 <tr>
 <td>Image du produit</td>
-<td><input type="text"  value="<?php echo $IM_P ?>">
-	<input type="file" name="IM_P" value="IM_P"></td>
+<td><input type="file" name="IM_P" value="<?php echo $IM_P ?>"></input>
+	</td>
 </tr>
 <tr>
 <td class="first_line" >Reference ENOVE</td>

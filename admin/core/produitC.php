@@ -167,7 +167,7 @@ class ProduitC {
 	}
 
 	function modifierProduit($produits){
-		$sql="UPDATE produits SET IM_P:=IM_P,REF_IEC=:REF_IEC,Cat=:Cat,CAPACITY_Ah=:CAPACITY_Ah,TENSION_V=:TENSION_V,POID_KG=:POID_KG,DIM_mm=:DIM_mm,Prixp=:Prixp,FT=:FT WHERE REF_EN=:REF_EN";
+		$sql="UPDATE produits SET REF_EN=:REF_EN,IM_P=:IM_P,REF_IEC=:REF_IEC,Cat=:Cat,CAPACITY_Ah=:CAPACITY_Ah,TENSION_V=:TENSION_V,POID_KG=:POID_KG,DIM_mm=:DIM_mm,Prixp=:Prixp,FT=:FT WHERE REF_EN=:REF_EN";
 
 		$db = config::getConnexion();
 		
@@ -194,19 +194,14 @@ try{
 		$req->bindValue(':DIM_mm',$DIM_mm);
 		$req->bindValue(':Prixp',$Prixp);
 		$req->bindvalue(':FT',$FT);
-		
-
-
             $s=$req->execute();
-
            // header('Location: index.php');
         }
         catch (Exception $e){
             echo " Erreur ! ".$e->getMessage();
-   echo " Les datas : " ;
-  print_r($datas);
+   			echo " Les datas : " ;
+  			print_r($datas);
         }
-
 	}
 	function recupererProduit($REF_EN){
 		$sql="SELECT * from produits where REF_EN='".$REF_EN."'";

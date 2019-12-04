@@ -44,9 +44,10 @@
 		<nav class="header-nav">
 				<form action="POST">
 			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="index.html" >Home</a></li>
 				<li><a href="about-us.html">Gestion Client</a></li>
-				<li><a href="afficherProduit.php">Gestion Produit</a></li>
+				<li><a href="afficherProduit.php">Gestion des Produits</a></li>
+        		<li><a href="afficherCategorie.php">Gestion des Categories</a></li>
 				<li><a href="contact.html">Gestion Commande & panier</a></li>
 				<li><a href="contact.html">Gestion Livraison</a></li>
 				<li><a href="contact.html">Gestion d'événement</a></li>
