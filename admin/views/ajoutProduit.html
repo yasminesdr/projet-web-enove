@@ -1,9 +1,24 @@
 <html>
 <head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="stylebo.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="stylebo.css">
+        <link href="img/favicon.ico" rel="shortcut icon"/>
+        
+            <!-- Google font -->
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+         
+            <!-- Stylesheets -->
+            <link rel="stylesheet" href="css/bootstrap.min.css"/>
+            <link rel="stylesheet" href="css/font-awesome.min.css"/>
+            <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+            <link rel="stylesheet" href="css/flaticon.css"/>
+            <link rel="stylesheet" href="css/slicknav.min.css"/>
+        
+            <!-- Main Stylesheets -->
+            <link rel="stylesheet" href="css/style.css"/>
+
 </head>
 
 <script language="JavaScript" src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -13,6 +28,70 @@
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/3cfcc339e89/integration/bootstrap/3/dataTables.bootstrap.css">
 
 <body> 
+      <!-- Page Preloder -->
+	<div id="preloder">
+            <div class="loader"></div>
+        </div>
+    
+        <!-- Header Section -->
+            <header class="header-section">
+                </a>
+            
+            <nav class="header-nav">
+                    <form action="POST">
+                <ul class="main-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about-us.html">Gestion Client</a></li>
+                    <li><a href="afficherProduit.php">Gestion Produit</a></li>
+                    <li><a href="contact.html">Gestion Commande & panier</a></li>
+                    <li><a href="contact.html">Gestion Livraison</a></li>
+                    <li><a href="contact.html">Gestion d'événement</a></li>
+    
+                </ul>
+            </form>
+                <div class="header-right">
+                    
+                    
+                </div>
+            </nav>
+        </header>
+        <!-- Header Section end -->
+    
+        <!-- Hero Section end -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="hs-text">
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slider owl-carousel">
+                
+            </div>
+        </section>
+        <!-- Hero Section end -->
+    
+        <!-- Why Section end -->
+        
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+            </div>
+        </footer>
+        <!-- Footer Section end -->
+        
+        <!--====== Javascripts & Jquery ======-->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
         <div class="container">
 	
                 <div class="row">
@@ -25,11 +104,11 @@
 <caption>Ajouter Produit</caption>
 <tr>
     <td class="first_line">Image du Produit</td>
-    <td><input type="file" name="IM_P"></td>
+    <td><input type="file"  name="IM_P"></td>
     </tr>
 <tr>
 <td class="first_line">Reference Enove</td>
-<td><input type="text" name="REF_EN"></td>
+<td><input type="text"  name="REF_EN"></td>
 </tr>
 <tr>
 <td class="first_line">Reference IEC</td>
@@ -62,9 +141,13 @@
         <tr>
             <td class="first_line">Fiche Technique</td>
             <td><input type="file" name="FT" accept="application/pdf"></td>
-            
             <!--<td><button  >parcourir</td>-->
             </tr>
+            <tr>
+                <td class="first_line">cloture ou industriel</td>
+                <td><input type="text"  name="NOM_C"></td>
+                </tr>
+                <tr>
         
 <tr>
 <td></td>

@@ -28,9 +28,9 @@ if (isset($_GET['REF_EN'])){
 		$DIM_mm=$row['DIM_mm'];
 		$Prixp=$row['Prixp'];
 		$FT=$row['FT'];
+		$NOM_C=$row['NOM_C'];
 ?>
 <div class="container">
-	
 	<div class="row">
 		<h2 class="text-center">BD-ENOVE-PRODUIT</h2>
 	</div>
@@ -41,8 +41,8 @@ if (isset($_GET['REF_EN'])){
 <caption>Modifier Produit</caption>
 <tr>
 <td>Image du produit</td>
-<td><input type="text"  value="<?php echo $IM_P ?>">
-	<input type="file" name="IM_P" value="IM_P"></td>
+<td><input type="file" name="IM_P" value="<?php echo $IM_P ?>"></input>
+	</td>
 </tr>
 <tr>
 <td class="first_line" >Reference ENOVE</td>
@@ -81,6 +81,10 @@ if (isset($_GET['REF_EN'])){
 <td><input type="file" name="FT" accept="application/pdf" value="<?PHP echo $FT ?>"></td>
 </tr>
 <tr>
+<td class="first_line" >Cloture ou industriel</td>
+<td><input type="text" name="NOM_C" value="<?PHP echo $NOM_C ?>"></td>
+</tr>
+<tr>
 <td></td>
 <td><input type="submit" name="modifier" value="modifier"></td>
 </tr>
@@ -96,7 +100,7 @@ if (isset($_GET['REF_EN'])){
 	}
 }
 if (isset($_POST['modifier'])){
-	$produit=new Produits($_POST['IM_P'],$_POST['REF_EN'],$_POST['REF_IEC'],$_POST['Cat'],$_POST['CAPACITY_Ah'],$_POST['CAPACITY_Ah'],$_POST['TENSION_V'],$_POST['DIM_mm'],$_POST['Prixp'],$_POST['FT']);
+	$produit=new Produits($_POST['IM_P'],$_POST['REF_EN'],$_POST['REF_IEC'],$_POST['Cat'],$_POST['CAPACITY_Ah'],$_POST['CAPACITY_Ah'],$_POST['TENSION_V'],$_POST['DIM_mm'],$_POST['Prixp'],$_POST['FT'],$_POST['NOM_C']);
 	$produit1C->modifierProduit($produit);
 	header('Location: afficherProduit.php');
 }

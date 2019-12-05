@@ -46,7 +46,18 @@ class CategorieC {
         }
         catch (Exception $e){
             die('Erreur: '.$e->getMessage());
+		}
+		$sql="DELETE FROM produits where NOM_C = :NOM_C";
+		$db = config::getConnexion();
+        $req=$db->prepare($sql);
+		$req->bindValue(':NOM_C',$NOM_C);
+		try{
+            $req->execute();
+           // header('Location: index.php');
         }
+        catch (Exception $e){
+            die('Erreur: '.$e->getMessage());
+		}
 	}
 
 	function modifierCategorie($categories){

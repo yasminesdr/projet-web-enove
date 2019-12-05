@@ -4,7 +4,7 @@ require_once("../entities/produit.php");
 class ProduitC {
 
 	function ajouterProduit($produits){
-		$sql="insert into produits (IM_P,REF_EN,REF_IEC,Cat,CAPACITY_Ah,TENSION_V,POID_KG,DIM_mm,Prixp,FT) values (:IM_P,:REF_EN,:REF_IEC,:Cat,:CAPACITY_Ah,:TENSION_V,:POID_KG,:DIM_mm,:Prixp,:FT)";
+		$sql="insert into produits (IM_P,REF_EN,REF_IEC,Cat,CAPACITY_Ah,TENSION_V,POID_KG,DIM_mm,Prixp,FT,NOM_C) values (:IM_P,:REF_EN,:REF_IEC,:Cat,:CAPACITY_Ah,:TENSION_V,:POID_KG,:DIM_mm,:Prixp,:FT,:NOM_C)";
 		$db = config::getConnexion();
 		try{
 		$req=$db->prepare($sql);
@@ -18,6 +18,7 @@ class ProduitC {
 		$DIM_mm=$produits->getDIM_mm();
 		$Prixp=$produits->getPrixp();
 		$FT=$produits->getFT();
+		$NOM_C=$produits->getNOM_C();
 		$req->bindValue(':IM_P',$IM_P);
 		$req->bindValue(':REF_EN',$REF_EN);
 		$req->bindValue(':REF_IEC',$REF_IEC);
@@ -28,6 +29,7 @@ class ProduitC {
 		$req->bindValue(':DIM_mm',$DIM_mm);
 		$req->bindValue(':Prixp',$Prixp);
 		$req->bindValue(':FT',$FT);
+		$req->bindValue(':NOM_C',$NOM_C);
         $req->execute();
         }
         catch (Exception $e){
@@ -167,7 +169,7 @@ class ProduitC {
 	}
 
 	function modifierProduit($produits){
-		$sql="UPDATE produits SET IM_P:=IM_P,REF_IEC=:REF_IEC,Cat=:Cat,CAPACITY_Ah=:CAPACITY_Ah,TENSION_V=:TENSION_V,POID_KG=:POID_KG,DIM_mm=:DIM_mm,Prixp=:Prixp,FT=:FT WHERE REF_EN=:REF_EN";
+		$sql="UPDATE produits SET REF_EN=:REF_EN,IM_P=:IM_P,REF_IEC=:REF_IEC,Cat=:Cat,CAPACITY_Ah=:CAPACITY_Ah,TENSION_V=:TENSION_V,POID_KG=:POID_KG,DIM_mm=:DIM_mm,Prixp=:Prixp,FT=:FT,NOM_C=:NOM_C WHERE REF_EN=:REF_EN";
 
 		$db = config::getConnexion();
 		
@@ -183,7 +185,8 @@ try{
 		$DIM_mm=$produits->getDIM_mm();
 		$Prixp=$produits->getPrixp();
 		$FT=$produits->getFT();
-		$datas = array(':IM_P'=>$IM_P, ':REF_EN'=>$REF_EN, ':REF_IEC'=>$REF_IEC,':Cat'=>$Cat,':CAPACITY_Ah'=>$CAPACITY_Ah,':TENSION_V'=>$TENSION_V,':POID_KG'=>$POID_KG,':DIM_mm'=>$DIM_mm,':Prixp'=>$Prixp,':FT'=>$FT);
+		$NOM_C=$produits->getNOM_C();
+		$datas = array(':IM_P'=>$IM_P,':REF_EN'=>$REF_EN,':REF_IEC'=>$REF_IEC,':Cat'=>$Cat,':CAPACITY_Ah'=>$CAPACITY_Ah,':TENSION_V'=>$TENSION_V,':POID_KG'=>$POID_KG,':DIM_mm'=>$DIM_mm,':Prixp'=>$Prixp,':FT'=>$FT,':NOM_C'=>$NOM_C);
 		$req->bindValue(':IM_P',$IM_P);
 		$req->bindValue(':REF_EN',$REF_EN);
 		$req->bindValue(':REF_IEC',$REF_IEC);
@@ -194,19 +197,15 @@ try{
 		$req->bindValue(':DIM_mm',$DIM_mm);
 		$req->bindValue(':Prixp',$Prixp);
 		$req->bindvalue(':FT',$FT);
-		
-
-
+		$req->bindvalue(':NOM_C',$NOM_C);
             $s=$req->execute();
-
            // header('Location: index.php');
         }
         catch (Exception $e){
             echo " Erreur ! ".$e->getMessage();
-   echo " Les datas : " ;
-  print_r($datas);
+   			echo " Les datas : " ;
+  			print_r($datas);
         }
-
 	}
 	function recupererProduit($REF_EN){
 		$sql="SELECT * from produits where REF_EN='".$REF_EN."'";

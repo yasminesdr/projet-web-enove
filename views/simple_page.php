@@ -156,10 +156,11 @@ else
                 <div class="row">
                   <div class="col-md-12">
                     <div class="diapo-p">
-        <p class="item-1">This is your last chance. After this, there is no turning back.</p>
+        <!--<p class="item-1">This is your last chance. After this, there is no turning back.</p>
         <p class="item-2">Description 2</p>       
         <p class="item-3">Description 3 </p>
-    </div>                    
+        --> 
+    </div>                   
                     <!-- Services -->
             <section class="services">
                 <div class="container-fluid">
@@ -200,6 +201,7 @@ else
             <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
     				<thead>
 						<tr class="first_line">
+                                <th>Image du Produit</th>
                                 <th>Reference ENOVE</th>
                                 <th>Reference IEC</th>
                                 <th>Categorie du produit</th>
@@ -225,6 +227,7 @@ else
                     </thead>
                     <tfoot>
                             <tr class="first_line">
+                                    <th>Image du Produit</th>
                                     <th>Reference ENOVE</th>
                                     <th>Reference IEC</th>
                                     <th>Categorie du produit</th>
@@ -241,7 +244,7 @@ foreach($listeProduits as $row){
 	?>
 	<tbody>
 	<tr>
-	<td class="contenu2"> <a href="../entities/img/<?PHP echo $row['IM_P']; ?>" target="_blank">
+	<td class="image_produit"> <a href="../entities/img/<?PHP echo $row['IM_P']; ?>" target="_blank">
   <img src="../entities/img/<?PHP echo $row['IM_P']; ?>">
   </a></td>
 	<td class="contenu2"><?PHP echo $row['REF_EN']; ?></td>

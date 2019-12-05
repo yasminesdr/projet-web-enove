@@ -38,18 +38,16 @@
 		<nav class="header-nav">
 				<form action="POST">
 			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="../views/index.html" >Home</a></li>
 				<li><a href="about-us.html">Gestion Client</a></li>
-				<li><a href="afficherProduit.php">Gestion Produit</a></li>
+				<li><a href="afficherProduit.php" class="active">Gestion des Produits</a></li>
+        <li><a href="afficherCategorie.php">Gestion des Categories</a></li>
 				<li><a href="contact.html">Gestion Commande & panier</a></li>
 				<li><a href="contact.html">Gestion Livraison</a></li>
 				<li><a href="contact.html">Gestion d'événement</a></li>
-
 			</ul>
 		</form>
 			<div class="header-right">
-				
-				
 			</div>
 		</nav>
 	</header>
@@ -57,22 +55,7 @@
 
 	<!-- Hero Section end -->
 	<section class="hero-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="hs-text">
-						
-						
-					</div>
-				</div>
-				<div class="col-lg-6">
-					
-				</div>
-			</div>
-		</div>
-		<div class="hero-slider owl-carousel">
-			
-		</div>
+	
 	</section>
 	<!-- Hero Section end -->
 
@@ -220,6 +203,7 @@ else
 			<table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
     				<thead>
 						<tr class="first_line">
+                                <th>Image du Produit</th>
                                 <th>Reference ENOVE</th>
                                 <th>Reference IEC</th>
                                 <th>Categorie du produit</th>
@@ -248,12 +232,14 @@ else
             </form>
                                 </th>
                                 <th>Fiche Technique</th>
+                                <th>Cloture ou industriel</th>
                                 <th>modifier</th>
                                 <th>supprimer</th>
 						</tr>
                     </thead>
                     <tfoot>
                             <tr class="first_line">
+                                    <th>Image du Produit</th>
                                     <th>Reference ENOVE</th>
                                     <th>Reference IEC</th>
                                     <th>Categorie du produit</th>
@@ -263,6 +249,7 @@ else
                                     <th>Dimension Longueur*Largeur*hauteur</th>
                                     <th>Prix du produit</th>
                                     <th>Fiche Technique</th>
+                                    <th>Cloture ou industriel</th>
                                     <th>modifier</th>
                                     <th>supprimer</th>
                             </tr>
@@ -285,6 +272,7 @@ foreach($listeProduits as $row){
 	<td class="contenu2"><?PHP echo $row['DIM_mm']; ?></td>
   <td class="contenu2"><?PHP echo $row['Prixp']; ?></td>
 	<td class="contenu2"><a href="../entities/fichetechnique/<?PHP echo $row['FT']; ?>" target="_blank"><?PHP echo $row['FT']; ?> </a> </td>
+  <td class="contenue2"><?php echo $row['NOM_C']; ?></td>
 	
 	<td><a href="modifierProduit.php?REF_EN=<?PHP echo $row['REF_EN']; ?>"> <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></a></td>
 	

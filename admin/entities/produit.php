@@ -10,8 +10,9 @@ class Produits{
 	private $DIM_mm;
 	private $Prixp;
 	private $FT;
+	private $NOM_C;
 
-	function __construct($IM_P,$REF_EN,$REF_IEC,$Cat,$CAPACITY_Ah,$TENSION_V,$POID_KG,$DIM_mm,$Prixp,$FT){
+	function __construct($IM_P,$REF_EN,$REF_IEC,$Cat,$CAPACITY_Ah,$TENSION_V,$POID_KG,$DIM_mm,$Prixp,$FT,$NOM_C){
 		$this->IM_P=$IM_P;
 		$this->REF_EN=$REF_EN;
 		$this->REF_IEC=$REF_IEC;
@@ -22,6 +23,7 @@ class Produits{
 		$this->POID_KG=$POID_KG;
 		$this->Prixp=$Prixp;
 		$this->FT=$FT;
+		$this->NOM_C=$NOM_C;
 	}
 
 	function getIM_P(){
@@ -54,6 +56,9 @@ class Produits{
 	function getFT(){
 		return $this->FT;
 	}
+	function getNOM_C(){
+		return $this->NOM_C;
+	}
 
 	function setIM_P($IM_P){
 		$this->IM_P=$IM_P;
@@ -81,12 +86,15 @@ class Produits{
 		$this->DIM_mm=$DIM_mm;
    }
 
-function setPrixp($Prixp){
-	$this->Prixp=$Prixp;
-}
-function setFT($FT){
-	$this->FT=$FT;
-}
+	function setPrixp($Prixp){
+		$this->Prixp=$Prixp;
+	}
+	function setFT($FT){
+		$this->FT=$FT;
+	}
+	function setNOM_C($NOM_C){
+		$this->NOM_C=$NOM_C;
+	}
 }
 
 ?>
